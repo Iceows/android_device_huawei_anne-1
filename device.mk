@@ -22,5 +22,9 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/anne.rc:$(TARGET_COPY_OUT_ODM)/etc/init/anne.rc
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResOverlayAnne
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
