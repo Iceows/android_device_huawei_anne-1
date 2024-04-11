@@ -19,6 +19,18 @@ function blob_fixup() {
         odm/lib64/hwcam/hwcam.hi6250.m.ANNE.so)
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.biometrics.hwsecurefacerecognize@1.0.so" "${2}"
+            ## NOP vendor.huawei.hardware.perfgenius calls
+            # CameraPerfImpl::connectLocked
+            "${SIGSCAN}" -p "c3 19 f0 97 fc 6f ba a9 fa 67 01 a9" -P "c3 19 f0 97 00 00 80 d2 c0 03 5f d6" -f "${2}"
+            ## NOP vendor.huawei.hardware.sensors calls
+            # TofSensorImpl::connectTofServiceLocked
+            "${SIGSCAN}" -p "30 c7 ef 97 fc 0f 1b f8 f8 5f 01 a9" -P "30 c7 ef 97 00 00 80 d2 c0 03 5f d6" -f "${2}"
+            # AwbSensorImpl::connectAwbServiceLocked
+            "${SIGSCAN}" -p "27 b1 ee 97 fc 0f 1b f8 f8 5f 01 a9" -P "27 b1 ee 97 00 00 80 d2 c0 03 5f d6" -f "${2}"
+            # FlickerSensorImpl::connectFlickerServiceLocked
+            "${SIGSCAN}" -p "20 a9 ee 97 fc 0f 1b f8 f8 5f 01 a9" -P "20 a9 ee 97 00 00 80 d2 c0 03 5f d6" -f "${2}"
+            # LightSensorImpl::connectLightServiceLocked
+            "${SIGSCAN}" -p "82 a3 ee 97 fc 0f 1b f8 f8 5f 01 a9" -P "82 a3 ee 97 00 00 80 d2 c0 03 5f d6" -f "${2}"
             ;;
     esac
 }
