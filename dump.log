@@ -1,5 +1,5 @@
 Cleaning output directory (./../../huawei/hi6250-9-common/../../../vendor/huawei/hi6250-9-common/proprietary)..
-Extracting 448 files in ./../../huawei/hi6250-9-common/proprietary-files.txt from ./dump/:
+Extracting 435 files in ./../../huawei/hi6250-9-common/proprietary-files.txt from ./dump/:
   - bin/tee_auth_daemon
   - etc/native_packages.bin
   - lib/libc_secshared.so
@@ -221,7 +221,6 @@ Extracting 448 files in ./../../huawei/hi6250-9-common/proprietary-files.txt fro
   - vendor/etc/init/rild.rc
     + Fixed up vendor/etc/init/rild.rc
   - vendor/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc
-  - vendor/etc/init/vendor.huawei.hardware.fm@1.0-service.rc
   - vendor/etc/init/vendor.huawei.hardware.gnss@1.2-service.rc
   - vendor/etc/init/vendor.huawei.hardware.graphics.mediacomm@2.0-service.rc
   - vendor/etc/init/vendor.huawei.hardware.hisupl@1.0-service.rc
@@ -333,8 +332,6 @@ Extracting 448 files in ./../../huawei/hi6250-9-common/proprietary-files.txt fro
   - vendor/lib64/ese_hw_hal.so
   - vendor/lib64/hw/CameraFactoryService.so
   - vendor/lib64/hw/android.hardware.keymaster@3.0-impl-hisi.so
-  - vendor/lib64/hw/audio.primary_hisi.hi6250.so
-    + Fixed up vendor/lib64/hw/audio.primary_hisi.hi6250.so
   - vendor/lib64/hw/fingerprint.hi6250.so
   - vendor/lib64/hw/gatekeeper.hi6250.so
   - vendor/lib64/hw/gps.hi1102.default.so
@@ -471,24 +468,12 @@ Extracting 448 files in ./../../huawei/hi6250-9-common/proprietary-files.txt fro
   - vendor/lib64/vendor.huawei.hardware.radio@2.0.so
   - vendor/phone.prop
   - vendor/usr/idc/fingerprint.idc
-  - lib/libHidlUtil.so
-  - lib/libfm_jni.so
-    + Fixed up lib/libfm_jni.so
-  - lib/vendor.huawei.hardware.fm@1.0.so
-  - lib64/libHidlUtil.so
-  - lib64/libfm_jni.so
-    + Fixed up lib64/libfm_jni.so
-  - lib64/vendor.huawei.hardware.fm@1.0.so
-  - vendor/bin/hw/vendor.huawei.hardware.fm@1.0-service
-  - vendor/lib/hw/fm.hisi.hi6250.so
   - vendor/lib/libril-hisi.so
     + Fixed up vendor/lib/libril-hisi.so
-  - vendor/lib/vendor.huawei.hardware.fm@1.0.so
-  - vendor/lib64/hw/fm.hisi.hi6250.so
+  - vendor/lib64/hw/audio.primary.hi6250.so
+    + Fixed up vendor/lib64/hw/audio.primary.hi6250.so
   - vendor/lib64/libril-hisi.so
     + Fixed up vendor/lib64/libril-hisi.so
-  - vendor/lib64/hw/vendor.huawei.hardware.fm@1.0-impl.so
-  - vendor/lib64/vendor.huawei.hardware.fm@1.0.so
 Cleaning output directory (./../../huawei/hi6250-9-common/../../../vendor/huawei/anne/proprietary)..
 Extracting 304 files in ./../../huawei/hi6250-9-common/../anne/proprietary-files.txt from ./dump/:
   - odm/etc/audio/algorithm/algorithm_anne_normal.xml
